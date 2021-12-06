@@ -1,0 +1,671 @@
+/* block element styles that apply on frontend and backend 
+* These elements must self clear their children
+*/
+.skn-section:after,
+.skn-sectiongrid:after,
+.skn-wrap:after,
+.fakep:after,
+p:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.skn-block {
+  position: relative;
+  z-index: 0;
+}
+.skn-front-end #wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.skn-front-end #header,
+.skn-front-end #footer {
+  flex: 0 0 auto;
+}
+.skn-front-end #content {
+  flex: 1 0 auto;
+}
+
+#header {
+  z-index: 2;
+}
+.skn-area,
+.skn-section,
+.skn-sectiongrid,
+.sticky-wrapper {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* Defaults */
+.skn-area,
+.skn-section,
+.skn-sectiongrid {
+  width: 100%;
+}
+.no-js .skn-cell {
+  float: none;
+}
+.skn-cell {
+  cursor: default;
+  float: left;
+  min-height: 1em;
+}
+/* .skn-cell .baseparagraph p{font-size:1em;} */ /* avoid compounding em values */
+.baseparagraph {
+  font-size: 1em;
+} /* avoid compounding em values */
+
+.masonry-column-sizer {
+  position: absolute;
+  visibility: hidden;
+}
+.masonry-gutter-sizer {
+  position: absolute;
+  visibility: hidden;
+}
+.custom-grid .masonry-column-sizer {
+  display: none;
+}
+.custom-grid .masonry-gutter-sizer {
+  display: none;
+}
+
+.skn-cell > * {
+  word-wrap: break-word;
+}
+.skn-cell > *:first-child {
+  margin-top: 0;
+}
+.skn-cell p,
+.skn-cell h1,
+.skn-cell h2,
+.skn-cell h3,
+.skn-cell h4,
+.skn-cell h5,
+.skn-cell h6 {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.skn-cell strong {
+  font-weight: bold;
+  font-family: inherit;
+}
+.skn-cell em {
+  font-style: italic;
+}
+.skn-cell img {
+  vertical-align: top;
+  max-width: 100%;
+}
+.skn-cell .skn-image-loaded {
+  height: auto !important;
+}
+
+.skn-cell ol {
+  margin: 0;
+  padding: 0px;
+  list-style: decimal inside none;
+}
+.skn-cell ul {
+  margin: 0;
+  padding: 0px;
+  list-style: disc inside none;
+}
+.skn-cell a {
+  cursor: pointer !important;
+}
+.skn-cell a.skn-cell-overlay-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+.skn-cell-sizer {
+  height: 0 !important;
+  visibility: hidden;
+  min-height: 0 !important;
+  padding: 0;
+}
+
+.cell-content-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.skn-cell.skn-selected .cell-content-container {
+  outline: 1px dotted #000;
+  outline-offset: -1px;
+}
+.skn-cell.skn-selected .cell-content-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+  z-index: -1;
+}
+
+.skn-height-shim {
+  display: none;
+  width: 0;
+  flex: 0 0 auto;
+}
+.aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.skn-sectiongrid[data-height-behaviour="match"] .aspect-ratio-box {
+  min-height: 100%;
+}
+.aspect-ratio-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.skn-cell[data-content-alignment="flex-start"] .aspect-ratio-content {
+  justify-content: flex-start;
+}
+.skn-cell[data-content-alignment="center"] .aspect-ratio-content {
+  justify-content: center;
+}
+.skn-cell[data-content-alignment="flex-end"] .aspect-ratio-content {
+  justify-content: flex-end;
+}
+/* Front end */
+.skn-front-end
+  .skn-cell[data-content-alignment="space-around"]
+  .aspect-ratio-content {
+  justify-content: space-around;
+}
+.skn-front-end
+  .skn-cell[data-content-alignment="space-between"]
+  .aspect-ratio-content {
+  justify-content: space-between;
+}
+.skn-front-end
+  .skn-cell[data-content-alignment="space-evenly"]
+  .aspect-ratio-content {
+  justify-content: space-evenly;
+}
+/* Editor */
+.editor
+  .skn-cell[data-content-alignment="space-around"]
+  .cell-content-container {
+  justify-content: space-around;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.editor
+  .skn-cell[data-content-alignment="space-between"]
+  .cell-content-container {
+  justify-content: space-between;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.editor
+  .skn-cell[data-content-alignment="space-evenly"]
+  .cell-content-container {
+  justify-content: space-evenly;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skn-cell[data-height-function="minheight"] .skn-height-shim,
+.skn-cell[data-height-function="fixedheight"] .skn-height-shim,
+.skn-cell[data-height-function="fixedaspectratio"] .skn-height-shim,
+.skn-cell[data-height-function="minaspectratio"] .skn-height-shim {
+  display: block;
+}
+
+.skn-cell[data-height-function="fixedheight"] .aspect-ratio-content,
+.skn-cell[data-height-function="fixedaspectratio"] .aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.skn-cell[data-height-function="minheight"] .aspect-ratio-content,
+.skn-cell[data-height-function="minaspectratio"] .aspect-ratio-content {
+  position: relative;
+}
+
+ul.skn-text-list {
+  list-style: none;
+  padding-left: 1em !important;
+}
+ul.skn-text-list li::before {
+  content: "\2022";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.skn-cell ol.skn-text-list,
+.editor .skn-cell ol.skn-text-list {
+  list-style: none;
+  counter-reset: li;
+  padding-left: 1.5em;
+}
+ol.skn-text-list li {
+  counter-increment: li;
+}
+ol.skn-text-list li::before {
+  content: counter(li);
+  display: inline-block;
+  width: 2em;
+  margin-left: -2.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+}
+
+/* INLINE css */
+/* overflow hidden here, because we want the border-radius to clip its content, also allow the shadow not to be clipped */
+.skn-inline {
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  line-height: 1em;
+  vertical-align: top;
+  z-index: 0;
+}
+.skn-inline > * {
+  width: 100%;
+  max-width: 100%;
+}
+.skn-inline > iframe {
+  width: 100% !important;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  border: none;
+}
+.skn-inline > iframe[src*="soundcloud.com"] {
+  height: 100% !important;
+}
+.skn-inline > iframe[src*="google.com/calendar"] {
+  height: auto;
+  min-height: 0;
+}
+.skn-inline > iframe[data-plugin="sknform"] {
+  padding: 1px;
+}
+/*.skn-inline[data-inline-type="subnav"] > iframe{height:auto; min-height: auto;}*/
+
+.sknlightboxlink--cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.skn-block[data-column-count="1"] > .skn-cell {
+  width: 100%;
+}
+
+/* Revert masonry settings of single cells grids and allow relative positioning*/
+.skn-sectiongrid[data-num-cells="1"] {
+  height: auto !important;
+}
+.skn-sectiongrid[data-num-cells="1"] .skn-cell {
+  position: relative !important;
+  float: none;
+}
+
+/* make sure elements before element is behind and visible */
+.skn-cell p:before,
+.skn-cell h1:before,
+.skn-cell h2:before,
+.skn-cell h3:before,
+.skn-cell h4:before,
+.skn-cell h4:before,
+.skn-cell h5:before,
+.skn-cell h6:before,
+li > .label:before,
+[class*="complexSwatch"]:before {
+  display: block;
+  position: absolute;
+  content: "";
+  z-index: -2;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.skn-background-gallery {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.skn-background-gallery .bg-gallery-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.skn-background-gallery .sngallery {
+  height: 100% !important;
+}
+.skn-background-gallery .darken-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #000000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skn-background-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+}
+.skn-background-video .darken-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #000000;
+  opacity: 0;
+}
+.skn-background-video > video {
+  -webkit-transform: translate(-50%, -50%);
+  -mos-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mobilebrowser .skn-background-video > video {
+  display: none;
+}
+
+body[data-skn-threshold="620"] .skn-block[data-visibility="Desktop"],
+body:not([data-skn-threshold="620"]) .skn-block[data-visibility="Mobile"],
+body .skn-block[data-visibility="None"] {
+  display: none !important;
+}
+
+/* Remove bottom-margin from last cell in section 
+*  Note js patch is required to cover all cases eg last cell is hidden etc
+*/
+.skn-cell:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.skn-section-height-shim {
+  display: none;
+  width: 0;
+  flex: 0 0 auto;
+}
+.skn-section[data-min-height-function="min_aspect_ratio"]
+  .skn-section-height-shim,
+.skn-section[data-min-height-function="min_height"] .skn-section-height-shim {
+  display: block;
+}
+
+/* Vertically centre any grids inside sections that are matched to the viewport size */
+body
+  :not(.pagelightbox)
+  .skn-section[data-min-height-function="match_viewport"],
+body
+  :not(.pagelightbox)
+  .skn-section[data-min-height-function="min_aspect_ratio"],
+body :not(.pagelightbox) .skn-section[data-min-height-function="min_height"] {
+  display: flex;
+  align-items: center;
+}
+body
+  :not(.pagelightbox)
+  .skn-section[data-min-height-function="match_viewport"]
+  > .skn-sectiongrid,
+body
+  :not(.pagelightbox)
+  .skn-section[data-min-height-function="min_aspect_ratio"]
+  > .skn-sectiongrid,
+body
+  :not(.pagelightbox)
+  .skn-section[data-min-height-function="min_height"]
+  > .skn-sectiongrid {
+  align-self: center;
+}
+
+.pagelightbox .skn-section[data-min-height-function="match_viewport"],
+.pagelightbox .skn-section[data-min-height-function="min_aspect_ratio"],
+.pagelightbox .skn-section[data-min-height-function="min_height"] {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.pagelightbox {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.pagelightbox.external {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.pagelightbox.ios-scroll {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.pagelightbox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pagelightbox .contentswrap {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+.pagelightbox .lightboxcontents {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 250ms linear;
+  padding: 2vw;
+}
+.pagelightbox .lightboxcontents.ready {
+  opacity: 1;
+}
+.pagelightbox .loading:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url(//cloudfront.sketchanet.com/assets/2.0/loaders/lightbox-loader.gif);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-color: #000;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.pagelightbox .lightbox-loader {
+  display: none;
+}
+.pagelightbox .loading .lightbox-loader {
+  display: none;
+}
+.pagelightbox .close-button {
+  height: auto;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 500;
+  overflow: visible;
+}
+/* Override for the flexbox positioning on min height grid */
+.pagelightbox .skn-section .close-button {
+  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  backface-visibility: hidden;
+  top: 26px;
+  right: auto;
+  text-align: right;
+}
+.pagelightbox .close-button-graphics {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  font-size: 30px;
+  margin-top: -12px;
+  margin-right: -12px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1));
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1));
+  font-weight: 700;
+}
+.pagelightbox .close-button:hover .close-button-graphics {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
+}
+.pagelightbox .close-button-graphics:before {
+  content: "k";
+  font-family: "sknicons";
+  display: block;
+  color: inherit;
+  position: absolute;
+  top: -6px;
+  left: -3px;
+  width: 100%;
+}
+
+.pagelightbox .overlay-404 {
+  padding: 100px 50px;
+  background-color: #000;
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #f00;
+}
+.pagelightbox .imageLightboxContainer {
+  height: 90vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.sknExternalIframe {
+  width: 100%;
+  min-height: calc(100vh - 4vw);
+  border: 0px none;
+  background-color: #fff;
+}
+.sknExternalIframe--nobackground {
+  background-color: transparent;
+}
+
+/* Force menu cell content container to be full height */
+.skn-cell-widget-menu .cell-content-container {
+  height: 100%;
+}
+
+/* Mobile specific */
+@media (max-width: 620px) {
+  body * {
+    background-attachment: scroll !important;
+  }
+  body *:after {
+    background-attachment: scroll !important;
+  }
+  body *:before {
+    background-attachment: scroll !important;
+  }
+}
+/* Editor */
+body[data-skn-threshold="620"] #container.editor *,
+body[data-skn-threshold="620"] #container.editor *:before,
+body[data-skn-threshold="620"] #container.editor *:after,
+html.mobilebrowser *,
+html.mobilebrowser *:before,
+html.mobilebrowser *:after {
+  background-attachment: scroll !important;
+}
+
+body[data-skn-threshold="620"] .skn-cell {
+  width: 100%;
+  height: auto;
+  line-height: inherit !important;
+  float: none;
+}
+/* Remove bottom padding from last visible cell in a section */
+body[data-skn-threshold="620"]
+  .skn-cell:not([data-visibility="Desktop"]):last-of-type {
+  margin-bottom: 0 !important;
+}
+body[data-skn-threshold="620"]
+  .snimagegrid[data-gallery-type="grid_lightbox"]
+  li
+  > a.skn-img-wrap {
+  cursor: default !important;
+}

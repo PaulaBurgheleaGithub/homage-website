@@ -1,0 +1,713 @@
+/* CELLWIDGET MENU ITEM STYLING */
+.skn-cell.skn-cell-widget-menu {
+  z-index: 2;
+} /* Allows hover menus to show above other cells */
+.skn-subnav {
+  z-index: 2;
+}
+.skn-cell-widget-menu .skn-menu-wrap {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.skn-subnav .skn-menu-wrap {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.skn-cell-widget-menu .skn-menu-wrap > ul.skn-menu-list,
+.skn-subnav .skn-menu-wrap > ul.skn-menu-list {
+  width: 100%;
+  display: block;
+}
+
+.skn-cell-widget-menu[data-x-pos="left"],
+.skn-subnav [data-x-pos="left"],
+.skn-cell-widget-menu[data-x-pos="left"] .icon,
+.skn-subnav [data-x-pos="left"] .icon,
+.skn-cell-widget-menu[data-x-pos="left"] ul.skn-menu-list,
+.skn-subnav [data-x-pos="left"] ul.skn-menu-list {
+  text-align: left;
+}
+
+.skn-cell-widget-menu[data-x-pos="center"],
+.skn-subnav [data-x-pos="center"],
+.skn-cell-widget-menu[data-x-pos="center"] .icon,
+.skn-subnav [data-x-pos="center"] .icon,
+.skn-cell-widget-menu[data-x-pos="center"] ul.skn-menu-list,
+.skn-subnav [data-x-pos="center"] ul.skn-menu-list {
+  text-align: center;
+}
+
+.skn-cell-widget-menu[data-x-pos="right"],
+.skn-subnav [data-x-pos="right"],
+.skn-cell-widget-menu[data-x-pos="right"] .icon,
+.skn-subnav [data-x-pos="right"] .icon,
+.skn-cell-widget-menu[data-x-pos="right"] ul.skn-menu-list,
+.skn-subnav [data-x-pos="right"] ul.skn-menu-list {
+  text-align: right;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list,
+.skn-subnav ul.skn-menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list:after,
+.skn-subnav ul.skn-menu-list:after {
+  clear: both;
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list li,
+.skn-subnav ul.skn-menu-list li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list[data-direction="vertical"] li,
+.skn-subnav ul.skn-menu-list[data-direction="vertical"] li {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding-right: 20px;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list li > .label,
+.skn-subnav ul.skn-menu-list li > .label {
+  display: inline-block;
+  position: relative;
+}
+
+.skn-cell-widget-menu li > a.label,
+.skn-subnav li > a.label {
+  font-family: inherit;
+  font-size: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-shadow: inherit;
+  word-spacing: inherit;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list li.selected,
+.skn-subnav ul.skn-menu-list li.selected {
+  cursor: default;
+}
+
+.skn-cell-widget-menu ul.skn-menu-list li > ul.skn-menu-list,
+.skn-subnav ul.skn-menu-list li > ul.skn-menu-list {
+  display: none;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list[data-dropdown="fixed"]
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"],
+.skn-subnav
+  ul.skn-menu-list[data-dropdown="fixed"]
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"] {
+  display: block;
+  width: 100%;
+  left: 0;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list[data-dropdown="fixed"]
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list[data-dropdown="fixed"]
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"]
+  > li {
+  font-size: 90%;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"],
+.skn-subnav
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"] {
+  top: 100%;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"]
+  > li {
+  display: inline-block;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="vertical"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="vertical"]
+  > li {
+  display: block;
+}
+
+.skn-cell-widget-menu[data-x-pos="left"]
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"],
+.skn-subnav[data-x-pos="left"]
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"] {
+  text-align: left;
+  background-color: inherit;
+}
+
+.skn-cell-widget-menu[data-x-pos="center"]
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"],
+.skn-subnav[data-x-pos="center"]
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"] {
+  text-align: center;
+  background-color: inherit;
+}
+
+.skn-cell-widget-menu[data-x-pos="right"]
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"],
+.skn-subnav[data-x-pos="right"]
+  ul.skn-menu-list
+  li.selected
+  > ul.skn-menu-list[data-dropdown="fixed"][data-direction="horizontal"] {
+  text-align: right;
+  background-color: inherit;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li
+  > ul.skn-menu-list[data-dropdown="floating"],
+.skn-subnav ul.skn-menu-list li > ul.skn-menu-list[data-dropdown="floating"] {
+  display: none;
+  position: absolute;
+}
+
+/* Floating sub menu hover */
+/* some js enhancements here .hovered to allow rolloff delay */
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"],
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"],
+.skn-subnav
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"],
+.skn-subnav
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"] {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="vertical"]
+  > li,
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="vertical"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="vertical"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="vertical"]
+  > li {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding-right: 35px;
+}
+
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"],
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"],
+.skn-subnav
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"],
+.skn-subnav
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"] {
+  width: 100%;
+  left: 0;
+}
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"]
+  > li,
+.skn-cell-widget-menu
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list
+  li:hover
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"]
+  > li,
+.skn-subnav
+  ul.skn-menu-list
+  li.hovered
+  > ul.skn-menu-list[data-dropdown="floating"][data-direction="horizontal"]
+  > li {
+  display: inline-block;
+}
+
+.skn-cell-widget-menu:not(.closed)
+  .skn-menu-wrap
+  li.selected
+  > ul[data-direction="vertical"][data-dropdown="fixed"],
+.skn-cell-widget-menu:not(.closed)
+  .skn-menu-wrap
+  ul[data-direction="vertical"][data-level="0"],
+.skn-subnav:not(.closed)
+  .skn-menu-wrap
+  li.selected
+  > ul[data-direction="vertical"][data-dropdown="fixed"],
+.skn-subnav:not(.closed)
+  .skn-menu-wrap
+  ul[data-direction="vertical"][data-level="0"] {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.skn-cell-widget-menu
+  ul[data-dropdown="floating"]
+  ul[data-dropdown="floating"][data-direction="vertical"],
+.skn-subnav
+  ul[data-dropdown="floating"]
+  ul[data-dropdown="floating"][data-direction="vertical"] {
+  left: 100%;
+  top: -5px;
+  text-align: inherit;
+}
+
+.skn-cell-widget-menu ul[data-level="0"][data-dropdown="fixed"],
+.skn-subnav ul[data-level="0"][data-dropdown="fixed"] {
+  position: relative;
+}
+
+.skn-cell-widget-menu:not([data-menu-type="expandable"])
+  ul[data-level="0"][data-dropdown="fixed"]
+  li.selected
+  > ul[data-dropdown="fixed"][data-direction="vertical"],
+.skn-subnav:not([data-menu-type="expandable"])
+  ul[data-level="0"][data-dropdown="fixed"]
+  li.selected
+  > ul[data-dropdown="fixed"][data-direction="vertical"] {
+  margin-left: 1em;
+}
+
+.skn-cell-widget-menu
+  ul[data-direction="vertical"][data-dropdown="fixed"]
+  li:hover
+  > ul[data-dropdown="floating"][data-direction="vertical"],
+.skn-cell-widget-menu
+  ul[data-direction="vertical"][data-dropdown="fixed"]
+  li.hovered
+  > ul[data-dropdown="floating"][data-direction="vertical"],
+.skn-subnav
+  ul[data-direction="vertical"][data-dropdown="fixed"]
+  li:hover
+  > ul[data-dropdown="floating"][data-direction="vertical"],
+.skn-subnav
+  ul[data-direction="vertical"][data-dropdown="fixed"]
+  li.hovered
+  > ul[data-dropdown="floating"][data-direction="vertical"] {
+  left: 100%;
+  top: -5px;
+  text-align: inherit;
+}
+
+.skn-cell-widget-menu
+  ul[data-direction="horizontal"][data-dropdown="fixed"]:not([data-level="0"])
+  > li,
+.skn-subnav
+  ul[data-direction="horizontal"][data-dropdown="fixed"]:not([data-level="0"])
+  > li {
+  vertical-align: top;
+}
+
+/* Fixed horizontal sub menus must be absolutely positioned so they can extend beyond the parent node */
+.skn-cell-widget-menu ul ul[data-direction="horizontal"][data-dropdown="fixed"],
+.skn-subnav ul ul[data-direction="horizontal"][data-dropdown="fixed"] {
+  position: absolute;
+}
+
+.skn-cell-widget-menu
+  ul[data-direction="vertical"]
+  > li.children
+  > .label:after,
+.skn-subnav ul[data-direction="vertical"] > li.children > .label:after {
+  content: "";
+  border: 2px solid #000;
+  display: block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-top: none;
+  border-left: none;
+  border-color: inherit;
+  top: 50%;
+  right: -16px;
+  margin-top: -3px;
+}
+
+.skn-cell-widget-menu
+  ul[data-direction="vertical"][data-dropdown="fixed"]
+  > li.children.selected
+  > .label:after,
+.skn-subnav
+  ul[data-direction="vertical"][data-dropdown="fixed"]
+  > li.children.selected
+  > .label:after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.skn-cell-widget-menu.closed .skn-menu-wrap,
+.skn-subnav.closed .skn-menu-wrap {
+  display: block;
+}
+
+.skn-cell-widget-menu .skn-menu-wrap .icon,
+.skn-subnav .skn-menu-wrap .icon {
+  display: none;
+}
+
+.skn-cell-widget-menu.closed .skn-menu-wrap .icon,
+.skn-subnav.closed .skn-menu-wrap .icon {
+  display: block;
+} /* Updated from inline block 2017-05-18 */
+
+.skn-cell-widget-menu[data-menu-type="expandable"].closed .skn-menu-wrap .icon,
+.skn-subnav[data-menu-type="expandable"].closed .skn-menu-wrap .icon {
+  display: block;
+}
+
+.skn-cell-widget-menu[data-menu-type="autowrap"] [data-level="1"],
+.skn-subnav[data-menu-type="autowrap"] [data-level="1"] {
+  display: none !important;
+} /* Autowrap only supports showing the root level*/
+
+.skn-cell-widget-menu .skn-menu-wrap .icon,
+.skn-subnav .skn-menu-wrap .icon {
+  cursor: pointer;
+  border: 0px none !important;
+  margin: auto !important;
+  padding: 0 !important;
+  line-height: 28px !important;
+  height: 24px;
+}
+.skn-cell-widget-menu.closed .skn-menu-wrap .icon:after,
+.skn-cell-widget-menu[data-menu-type="icononly"] .skn-menu-wrap .icon:after,
+.skn-subnav.closed .skn-menu-wrap .icon:after,
+.skn-subnav[data-menu-type="icononly"] .skn-menu-wrap .icon:after {
+  content: "a";
+  font-family: "sknicons";
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 24px;
+  margin: auto; /* Need to override margin from text based menu */
+  padding: 1px 2px 0px 2px;
+  text-transform: none !important; /* Anything else makes the icon disappear*/
+  font-weight: normal !important;
+}
+.skn-cell-widget-menu.closed .skn-menu-wrap .icon:before,
+.skn-cell-widget-menu[data-menu-type="icononly"] .skn-menu-wrap .icon:before,
+.skn-subnav.closed .skn-menu-wrap .icon:before,
+.skn-subnav[data-menu-type="icononly"] .skn-menu-wrap .icon:before {
+  content: "\200B";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.skn-cell-widget-menu.closed ul.skn-menu-list,
+.skn-subnav.closed ul.skn-menu-list {
+  display: none;
+}
+
+/* Expandable menu */
+.skn-cell-widget-menu.closed.open ul.skn-menu-list[data-level="0"],
+.skn-subnav.closed.open ul.skn-menu-list[data-level="0"] {
+  display: inline-block;
+  width: auto;
+}
+
+.skn-cell-widget-menu.closed.open .skn-menu-wrap .icon:after,
+.skn-subnav.closed.open .skn-menu-wrap .icon:after {
+  content: "x";
+}
+
+/* Icon only menu */
+.skn-cell-widget-menu[data-menu-type="icononly"]
+  > .skn-menu-wrap
+  > .skn-menu-list,
+.skn-subnav[data-menu-type="icononly"] > .skn-menu-wrap > .skn-menu-list {
+  display: none;
+}
+
+.skn-cell-widget-menu[data-menu-type="icononly"] .skn-menu-wrap .icon,
+.skn-subnav[data-menu-type="icononly"] .skn-menu-wrap .icon {
+  display: inline-block;
+}
+
+/* 9 point positioning of the menu widget contents */
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"].skn-cell-widget-menu[data-y-pos="top"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"]
+  .skn-subnav[data-y-pos="top"]
+  .skn-menu-wrap
+  > ul.skn-menu-list {
+  top: 0;
+  position: relative;
+}
+
+/* Vertical centre for menu */
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"].skn-cell-widget-menu[data-y-pos="center"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-cell.skn-cell-widget-menu[data-y-pos="center"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"]
+  .skn-subnav[data-y-pos="center"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-subnav[data-y-pos="center"]
+  .skn-menu-wrap
+  > ul.skn-menu-list {
+  top: 50%;
+  position: relative;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Vertical centre for menu icon */
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"].skn-cell-widget-menu[data-y-pos="center"]
+  .skn-menu-wrap
+  > .icon,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-cell.skn-cell-widget-menu[data-y-pos="center"]
+  .skn-menu-wrap
+  > .icon,
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"]
+  .skn-subnav[data-y-pos="center"]
+  .skn-menu-wrap
+  > .icon,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-subnav[data-y-pos="center"]
+  .skn-menu-wrap
+  > .icon {
+  top: 50%;
+  position: relative;
+  padding-top: 5px;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Vertical bottom for menu */
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"].skn-cell-widget-menu[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-cell.skn-cell-widget-menu[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"]
+  .skn-subnav[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > ul.skn-menu-list,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-subnav[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > ul.skn-menu-list {
+  top: 100%;
+  position: relative;
+  -moz-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+/* Vertical bottom for icon */
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"].skn-cell-widget-menu[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > .icon,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-cell.skn-cell-widget-menu[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > .icon,
+body[data-skn-threshold="960"]
+  .skn-cell[data-height-function="fill"]
+  .skn-subnav[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > .icon,
+body[data-skn-threshold="960"]
+  .skn-sectiongrid[data-height-behaviour="match"]
+  .skn-subnav[data-y-pos="bottom"]
+  .skn-menu-wrap
+  > .icon {
+  top: 100%;
+  position: relative;
+  padding-top: 5px;
+  -moz-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* Hide floating menus from editor */
+/*
+.sknSiteBuilder ul.skn-menu-list[data-dropdown="floating"]{display:none !important;}
+*/
+
+/* mm menu extra styling */
+html.mm-opened body {
+  overflow: hidden;
+} /* hides the scroll bar */
+
+html.mm-opened .mm-page {
+  -webkit-box-shadow: inset -2px 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset -2px 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+#mmmenu > ul,
+.mm-ismenu,
+.mm-page {
+  background: inherit;
+}
+.mm-list a.mm-subopen {
+}
+.mm-list a.mm-subclose:before {
+  margin: 0px 0 -5px;
+}
+
+#mmmenu .skn-cell-widget-menu {
+  min-height: 100% !important;
+}
+#mmmenu ul.skn-menu-list {
+  vertical-align: top;
+}
+#mmmenu ul.skn-menu-list li {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0px !important;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  border-radius: 0;
+  /* background-color: transparent; */
+}
+#mmmenu ul.skn-menu-list li:after {
+  border: none;
+}
+#mmmenu ul.skn-menu-list li a.label {
+  width: 100%;
+  display: block;
+  position: relative;
+  text-align: left;
+}
+#mmmenu > ul > li[data-id] {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Special class for adding custom menu hamburgers */
+.skn-nav-icon {
+  cursor: pointer;
+}

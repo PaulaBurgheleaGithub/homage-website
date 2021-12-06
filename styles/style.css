@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "DM_Sans";
+  src: url("assets/DM_Sans/");
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  color: #222;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+body {
+  display: block;
+  margin: 8px;
+  font-size: 12px;
+}
+div {
+  display: block;
+}
+#container {
+  min-height: 100vh;
+  position: relative;
+}
+@media (max-width: 620px) body * {
+  background-attachment: scroll !important;
+}
+header nav {
+  background-image: url("/assets");
+}

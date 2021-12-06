@@ -1,0 +1,341 @@
+html,
+body {
+  overflow-x: hidden;
+  font-size: 12px;
+}
+html {
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html.noscroll {
+  overflow-y: hidden;
+}
+html.force-scroll {
+  overflow-y: scroll;
+}
+.blur-background {
+  filter: blur(2px);
+}
+
+/* BODY NEEDS TO HAVE FULL DOC DIMENSIONS */
+body {
+  -webkit-transition: all 0.05s ease-in-out;
+  -moz-transition: all 0.05s ease-in-out;
+  -ms-transition: all 0.05s ease-in-out;
+  -o-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+  overflow-y: hidden;
+}
+/*
+@media only screen and (min-width: 620px){
+	.skn-not-ready body{opacity: 0;}
+}
+*/
+.skn-not-ready body {
+  opacity: 0;
+}
+.skn-ready body {
+  opacity: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* give our container full height of body */
+#container {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* background is the only area which is fixed and as wide as the container */
+#background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+/* make sure it sits above any main elements */
+#header {
+  z-index: 2;
+}
+
+/* the background colour of the site is applied to the body */
+.skn-background:before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* temporary element used by the grid plugin to get scrollbar width */
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
+iframe.twitter-timeline {
+  width: inherit !important;
+}
+
+/* Gallery sizing shim */
+.widget-ratio-shim {
+  float: left;
+  width: 1px;
+  display: none;
+}
+.sngallery.aspect-ratio-processed .widget-ratio-shim {
+  display: none;
+}
+/* container that holds the crawler only background images */
+#crawler_background_images {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/* Shopping cart icon */
+.skn-open-cart {
+  cursor: pointer;
+}
+
+/* Prevent Google Maps interaction until clicked on */
+.googlemaps {
+  cursor: pointer;
+}
+.googlemaps:before {
+  display: block;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+.googlemaps:hover:before {
+  opacity: 0.15;
+}
+.googlemaps.active:before {
+  display: none;
+}
+.googlemaps iframe {
+  pointer-events: none;
+  cursor: pointer;
+}
+.googlemaps iframe.allowmouseevents {
+  pointer-events: auto;
+}
+
+/* Sticky Elements */
+.skn-stuck {
+  max-width: 100%;
+}
+.skn-stuck[data-sticky="top"] {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.sticky-wrapper [data-sticky="bottom"] {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+.sticky-wrapper .skn-unstuck[data-sticky="bottom"] {
+  position: relative;
+  bottom: auto !important;
+}
+.sticky-wrapper.sticky-bottom.sticky-down {
+  height: auto !important;
+}
+
+.skn-post-list {
+}
+.skn-post-list.list-grid,
+.skn-shop-list.list-grid {
+  display: grid;
+}
+
+/*
+@media screen and (max-width:440px){
+	.skn-post-list.list-grid,.skn-shop-list.list-grid{grid-template-columns: 1fr;}
+}
+*/
+
+.skn-post-list.list-carousel,
+.skn-shop-list.list-carousel {
+  display: block;
+}
+.list-carousel .flickity-button:disabled {
+  pointer-events: auto;
+}
+.list-carousel .flickity-prev-next-button {
+  width: 24px;
+  height: 24px;
+}
+
+.flickity-resize .post-item,
+.flickity-resize .shoplist-item {
+  min-height: 100%;
+} /* Make sure they are all the same height */
+.flickity-resize .post-link-after {
+  position: absolute;
+  bottom: 0;
+}
+.skn-post-list.list-vertical .shim {
+  display: none;
+}
+.skn-post-list.list-grid .shim,
+.skn-post-list.list-carousel .shim {
+  display: block;
+  position: relative;
+}
+.skn-post-list.list-grid .post-image img,
+.skn-post-list.list-carousel .post-image img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.skn-post-list .post-image {
+  position: relative;
+  margin-bottom: 0.75em;
+}
+.skn-post-list.list-vertical .post-image {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.shoplist-item .skn-cart-button-container {
+  max-width: 100% !important;
+}
+
+.post-item {
+  position: relative;
+}
+.post-item img {
+  max-width: 100%;
+}
+.post-item .post-image .skn-inline {
+  width: 100%;
+}
+.post-item .post-image {
+  background-size: cover;
+  background-position: center center;
+}
+.no-object-fit .post-item .post-image img {
+  visibility: hidden;
+} /* Hide the image for IE11 */
+.list-grid .post-item .post-image .skn-inline,
+.list-carousel .post-item .post-image .skn-inline {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.list-grid .post-item .post-image .skn-image-placeholder,
+.list-carousel .post-item .post-image .skn-image-placeholder {
+  padding-bottom: 0 !important;
+  height: 100%;
+}
+.post-item.image-left {
+  display: flex;
+  align-items: stretch;
+}
+.post-item.image-left .post-image {
+  flex: 1 1 30%;
+  margin-right: 20px;
+}
+.post-item.image-left .post-content {
+  flex: 2 1 70%;
+}
+.post-link {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+}
+.post-link-after {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-top: 0.75em;
+}
+
+.limit-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: 16px;
+}
+.force-single-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.skn-image-placeholder {
+  display: inline-block;
+  position: relative;
+}
+.skn-image-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Search widget defaults */
+.skn-search-widget {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+.search-container {
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.search-wrapper {
+  position: absolute;
+  width: 90%;
+  max-width: 900px;
+  height: 86%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}

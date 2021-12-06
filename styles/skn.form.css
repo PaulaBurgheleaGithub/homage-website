@@ -1,0 +1,58 @@
+.sknform {
+  display: block;
+  max-width: 950px;
+}
+.sknformheader {
+  margin-bottom: 15px;
+}
+.sknformradioheader {
+  display: block;
+}
+.sknformradiooption {
+  margin-right: 15px;
+  display: block;
+}
+
+.sknforminput input {
+  line-height: 22px;
+}
+.sknformrow {
+  margin-bottom: 10px;
+  display: block;
+}
+.sknformrow > label {
+  margin-bottom: 5px;
+  display: block;
+}
+.sknforminput,
+.sknforminput * {
+  width: 100%;
+}
+.sknforminput textarea {
+  resize: none;
+  margin: 0;
+}
+.sknformrow.sknformbutton * {
+  margin: 0;
+}
+.sknformerror {
+  color: red;
+}
+.sknformbutton .sknformerror {
+  display: block;
+  margin-top: 10px;
+}
+.sknform .retrunBtn {
+  display: block;
+  margin: 10px 0;
+}
+
+.sknform .onsubmit {
+  display: none;
+}
+.sknform.submitted .onsubmit {
+  display: block;
+}
+.sknform.submitted form {
+  display: none;
+}
