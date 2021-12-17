@@ -23,6 +23,7 @@
 	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
 	<link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+	<link rel="icon" type="image/png" href="/img/favicon.ico" />
 
 	<meta name="application-name" content="&nbsp;" />
 	<meta name="msapplication-TileColor" content="#FFFFFF" />
@@ -33,7 +34,6 @@
 	<meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
 
 	<!-- Primary Meta Tags -->
-	<title>NinetyOne</title>
 	<meta name="title" content="NinetyOne">
 	<meta name="studio-ninetyone website" content="studio-ninetyone">
 
@@ -56,40 +56,74 @@
 	<link rel="stylesheet" href="/styles/style.css" type="text/css" />
 	<link rel="stylesheet" href="/styles/mobile.css" type="text/css" />
 
+
 </head>
 
 <body>
 	<div id=container>
-		<header id="header">
+		<header class="header">
 			<div class="header-padding fix-header">
 				<!-- div to position the elements inside the headers -->
-				<div>
-					<!-- SVG logo file -->
-
-					<nav>
-
-					</nav>
+				<div class="header-container">
+					<div class="nav">
+						<nav>
+							<ul>
+								<li>
+									<a href="/index.html">HOME</a>
+								</li>
+								<li>
+									<a href="/pages/work.html">WORK</a>
+								</li>
+								<li>
+									<a href="/pages/about.html">ABOUT</a>
+								</li>
+								<li>
+									<a href="/pages/journal.html">JOURNAL</a>
+								</li>
+								<li>
+									<a href="/pages/contact.html">CONTACT</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="logoSVG">
+						<img src="img/mCSSlogo.svg" alt="logo image" />
+					</div>
+					<div class="time">
+					</div>
 				</div>
-			</div>
-
 		</header>
 		<main>
-			<section>
-				<h2>We design confidence.</h2>
-				<picture>
-
-				</picture>
-				<p>
-					We don’t tell brands who to be. We find out who they truly are then we help shape them. We create
-					the
-					kinds of identities that feel natural and unshakeable. The kinds that make brands sure-footed,
-					clear-sighted and confident.
-				</p>
-			</section>
-
-			<section>
-				<h2>Selected works and articles</h2>
+			<div class="section1">
 				<div>
+					<h2>We design confidence.</h2>
+				</div>
+				<div class="section1-container">
+					<div class="image-slide">
+						<picture>
+							<img src="img/1628072206bardouroweb2.jpg" alt="douro bar" />
+						</picture>
+						<figcaption>
+							<p>Bar Douro branding</p>
+						</figcaption>
+					</div>
+					<div class="section1-txt">
+						<p>
+							We don’t tell brands who to be. We find out who they truly are then we help shape them. We
+							create
+							the
+							kinds of identities that feel natural and unshakeable. The kinds that make brands
+							sure-footed,
+							clear-sighted and confident.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="section2">
+				<div>
+					<h2>Selected works and articles</h2>
+				</div>
+				<div class="section2-container">
 					<p>
 						<span>
 							<img src="img/theSandoHouse.jpg" alt="The Sando House Image" />
@@ -116,7 +150,6 @@
 						<u>Splendid</u>
 					</p>
 					<p>A return to the golden age of hospitality</p>
-
 					<p>
 						<span>
 							Branding - Work
@@ -158,8 +191,7 @@
 					</p>
 					<a href="https://www.studio-ninetyone.com/work/wim-packaging"></a>
 				</div>
-			</section>
-
+			</div>
 		</main>
 		<footer>
 			<div>
@@ -170,10 +202,8 @@
 					&nbsp;Instagram:
 					<a data-link-type="external"
 						href="https://www.instagram.com/studio.ninetyone/">@studio-ninetyone</a>
-
 				</p>
 			</div>
-
 		</footer>
 	</div>
 </body>

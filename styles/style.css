@@ -1,6 +1,17 @@
 @font-face {
-  font-family: "DM_Sans";
-  src: url("");
+  font-family: "DM_Sans_Regular";
+  font-family: "DM_Sans_Medium";
+  font-family: "DM_Sans_Italic";
+  font-family: "DM_Sans_Bold";
+  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Regular.ttf")
+    format("truetype");
+  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Medium.ttf")
+    format("truetype");
+  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Italic.ttf")
+    format("truetype");
+  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Bold.ttf")
+    format("truetype");
+  font-weight: 200 300 400;
 }
 * {
   margin: 0px;
@@ -14,32 +25,29 @@
 html {
   color: #222;
   line-height: 1.4;
-  font-family: sans-serif;
   font-size: 12px;
+  font-family: "DM_Sans_Regular";
 }
 body {
+  font-family: "DM_Sans_Regular", sans-serif;
   display: block;
-  margin: 8px;
   font-size: 12px;
 }
-div {
-  display: block;
+header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #000000;
 }
+/* layout */
+
 #container {
   min-height: 100vh;
   position: relative;
+  padding: 0;
 }
-header {
-  height: 42px;
-  border-bottom: 1px solid #000000;
-}
-/* have no idea what does this do */
-#header {
-  z-index: 2;
-}
-header nav {
-  background-image: url("");
-}
+
 .fix-header {
   margin-left: auto;
   margin-right: auto !important;
@@ -48,7 +56,67 @@ header nav {
   border-top: none;
 }
 .header-padding {
-  padding: 1% 3% 1% 3%;
+  padding: 1%;
 }
-::selection {
+.header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+}
+.nav {
+  position: relative;
+  left: 0%;
+  top: 0px;
+  height: 39px;
+}
+.logoSVG {
+  width: 33%;
+}
+.logoSVG img {
+  width: 80%;
+  max-width: 2473px;
+  display: inline-block;
+  height: 38.5224px;
+  min-height: 0px;
+}
+.time {
+  width: 33%;
+  background-color: aqua;
+}
+nav > ul > li > a {
+  color: #222;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav > ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+nav > ul > li {
+  display: inline;
+}
+
+.section1 {
+  padding: 4% 3% 6% 3%;
+}
+.section1-container {
+  display: flex;
+  flex-direction: row nowrap;
+  width: 100%;
+}
+.section1-container > picture > img {
+  width: 50%;
+}
+.section1-txt {
+  width: 100%;
+}
+.section2-container {
+  display: flex;
+  flex-direction: row nowrap;
+  width: 100%;
 }
