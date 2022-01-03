@@ -1,12 +1,16 @@
 @font-face {
-  font-family: "DM_Sans_Medium";
-  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Medium.ttf")
+  font-family: "DM_Sans_Regular";
+  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Regular.ttf")
     format("truetype");
   font-weight: 100;
+  font-size: normal;
+}
+@font-face {
   font-family: "Cormorant";
   src: url("/Users/paula/src/the-jump/projects/homage-website/assets/Cormorant_Garamond/CormorantGaramond-Light.ttf")
     format("truetype");
-  font-weight: 100 200 400;
+  font-weight: 100;
+  font-size: normal;
 }
 * {
   margin: 0px;
@@ -17,15 +21,15 @@
 *::after {
   box-sizing: inherit;
 }
+body {
+  font-family: "DM_Sans_Regular", serif;
+  font-weight: 100;
+  font-size: 12px;
+  display: block;
+}
 html {
   color: #222;
   line-height: 1.4;
-  font-size: 12px;
-  font-family: "DM_Sans_Medium";
-}
-body {
-  font-family: "DM_Sans_Medium", serif;
-  display: block;
   font-size: 12px;
 }
 header {
@@ -65,14 +69,15 @@ a:hover {
 nav > ul > li > a {
   color: #222;
   text-decoration: none;
-  font-family: "Cormorant", serif;
+  font-family: serif;
   font-size: 15px;
+  font-weight: 100;
 }
 nav > ul > li {
   display: inline-block;
   margin: 0 0% 5% 0;
   margin-right: 13px;
-  font-family: "Cormorant", serif;
+  font-family: serif;
   padding-left: 0;
 }
 .logoSVG {
@@ -95,7 +100,6 @@ nav > ul > li {
 }
 .title p {
   font-size: 8rem;
-  font-family: "Cormorant";
   color: #222;
 }
 .section1-container {
@@ -106,12 +110,10 @@ nav > ul > li {
 .section1-txt {
   width: 100%;
   padding: 0 30px 0 30px;
-
   font-weight: 100;
   text-align: left;
 }
 .section1-txt p {
-  font-family: "Cormorant";
   font-size: 53px;
   color: #222;
   line-height: 1.1;
@@ -144,7 +146,7 @@ nav > ul > li {
 .title-links > ul > li {
   display: block;
   padding: 5px;
-  font: 17px serif;
+  font: 15px serif;
   text-align: right;
 }
 .title-links a {
@@ -157,6 +159,7 @@ nav > ul > li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-family: sans-serif;
 }
 
 .section2-box > picture > img {
@@ -166,17 +169,23 @@ nav > ul > li {
 .section2-box > picture > img:hover {
   opacity: 70%;
 }
+.section2-box > p {
+  line-height: 1.2;
+  font-size: 12.5px;
+}
+.section2-box > p > span {
+  color: #707070;
+  font-size: 12.5px;
+}
 footer div {
   margin: 10px;
   padding: 2% 0 2% 0;
-  /* display: block;
-  text-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 footer div p {
-  font-size: 3rem;
+  font-size: 24px;
 }
 footer div p a {
   text-decoration: none;
