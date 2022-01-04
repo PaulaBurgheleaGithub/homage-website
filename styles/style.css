@@ -1,3 +1,4 @@
+/* fonts - "DM_Sans_Regular" and "Cormorant" */
 @font-face {
   font-family: "DM_Sans_Regular";
   src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Regular.ttf")
@@ -12,6 +13,7 @@
   font-weight: 100;
   font-size: normal;
 }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -165,17 +167,19 @@ nav > ul > li {
 .section2-box > picture > img {
   height: 515px;
   max-width: 100%;
+  padding-bottom: 1%;
 }
 .section2-box > picture > img:hover {
   opacity: 70%;
 }
-.section2-box > p {
+.section2-box p {
   line-height: 1.2;
-  font-size: 12.5px;
+  font-size: 13.5px;
+  font-weight: 500;
 }
-.section2-box > p > span {
+.section2-box > div {
   color: #707070;
-  font-size: 12.5px;
+  padding-top: 3%;
 }
 footer div {
   margin: 10px;
@@ -293,6 +297,7 @@ footer div p a {
     left: -3120px;
   }
 }
+
 /* work page layout */
 .work-container {
   padding: 4% 2.5% 1% 2.5%;
@@ -312,8 +317,6 @@ footer div p a {
   height: 100%;
 }
 .row1 {
-  display: inline-grid;
-  grid-template-columns: 70% 30%;
+  display: grid;
   background-color: #222;
-  column-gap: 1%;
 }
