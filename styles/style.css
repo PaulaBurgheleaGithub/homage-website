@@ -1,16 +1,14 @@
 /* fonts - "DM_Sans_Regular" and "Cormorant" */
 @font-face {
-  font-family: "DM_Sans_Regular";
-  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/DM_Sans/DMSans-Regular.ttf")
-    format("truetype");
-  font-weight: 100;
+  font-family: "DMSans-Regular";
+  src: url("/assets/fonts/DMSans-Regular.woff2");
+  font-weight: normal;
   font-size: normal;
 }
 @font-face {
-  font-family: "Cormorant";
-  src: url("/Users/paula/src/the-jump/projects/homage-website/assets/Cormorant_Garamond/CormorantGaramond-Light.ttf")
-    format("truetype");
-  font-weight: 100;
+  font-family: "RecklessNeue";
+  src: url("/assets/fonts/RecklessNeue-Light.woff2");
+  font-weight: lighter;
   font-size: normal;
 }
 
@@ -24,12 +22,12 @@
   box-sizing: inherit;
 }
 body {
-  font-family: "DM_Sans_Regular", serif;
-  font-weight: 100;
+  font-family: "RecklessNeue", serif;
   font-size: 12px;
   display: block;
 }
 html {
+  font-family: "RecklessNeue", serif;
   color: #222;
   line-height: 1.4;
   font-size: 12px;
@@ -46,15 +44,12 @@ header {
   border-bottom: 1px solid #000000;
 }
 main {
-  padding-top: 3%;
+  padding-top: 10vh;
 }
 a:hover {
   opacity: 70%;
 }
 /* layout */
-.general-container {
-  margin: 3% 3% 3% 3%;
-}
 .header-container {
   display: flex;
   flex-flow: row nowrap;
@@ -94,16 +89,20 @@ nav > ul > li {
   margin: 1% 5% 0% 0%;
   width: 10px;
 }
-.section1 {
-  padding: 0% 3% 3% 2.5%;
+
+section {
+  padding: 6vh 2vw 2vh 2.5vw;
 }
-.title {
-  margin: 2% 0 2% 0;
-}
-.title p {
-  font-size: 8rem;
+
+h1 {
+  margin: inherit;
+  padding-bottom: 2vh;
+  font-family: "RecklessNeue", serif;
+  font-weight: lighter;
+  font-size: 85px;
   color: #222;
 }
+
 .section1-container {
   display: flex;
   flex-direction: row wrap;
@@ -121,9 +120,6 @@ nav > ul > li {
   line-height: 1.1;
 }
 
-.section2 {
-  padding: 0 0 6% 2.5%;
-}
 .section2-heading {
   display: flex;
   flex-direction: row;
@@ -158,10 +154,10 @@ nav > ul > li {
 .section2-box {
   height: 595px;
   width: 25%;
+  font-family: "DMSans-Regular";
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-family: sans-serif;
 }
 
 .section2-box > picture > img {
