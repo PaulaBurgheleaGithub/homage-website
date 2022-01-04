@@ -91,7 +91,7 @@ nav > ul > li {
 }
 
 section {
-  padding: 6vh 2vw 2vh 2.5vw;
+  padding: 6vh 2.5vw 2vh 2.5vw;
 }
 
 h1 {
@@ -107,7 +107,7 @@ h1 {
 }
 section ul {
   display: block;
-  width: 100px;
+  width: 150px;
   text-align: right;
   background-color: #28a0d5;
 }
@@ -116,12 +116,15 @@ section ul li {
   text-decoration: none;
 }
 section ul li a {
+  font-size: 15px;
   text-decoration: none;
   color: #222;
 }
 section > div {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .section1-container {
   display: flex;
@@ -140,37 +143,6 @@ section > div {
   line-height: 1.1;
 }
 
-.section2-heading {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.section2-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.title,
-.title-links {
-  width: 100%;
-}
-.title-links {
-  width: 20%;
-  height: inherit;
-  padding: 0 3% 0 0;
-}
-.title-links > ul > li {
-  display: block;
-  padding: 5px;
-  font: 15px serif;
-  text-align: right;
-}
-.title-links a {
-  text-decoration: none;
-  color: #222;
-}
 .section2-box {
   height: 595px;
   width: 25%;
