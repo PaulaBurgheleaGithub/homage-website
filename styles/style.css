@@ -95,14 +95,34 @@ section {
 }
 
 h1 {
+  display: block;
+  width: 70%;
   margin: inherit;
   padding-bottom: 2vh;
   font-family: "RecklessNeue", serif;
   font-weight: lighter;
   font-size: 85px;
   color: #222;
+  background-color: aquamarine;
 }
-
+section ul {
+  display: block;
+  width: 100px;
+  text-align: right;
+  background-color: #28a0d5;
+}
+section ul li {
+  display: block;
+  text-decoration: none;
+}
+section ul li a {
+  text-decoration: none;
+  color: #222;
+}
+section > div {
+  display: flex;
+  flex-direction: row;
+}
 .section1-container {
   display: flex;
   flex-direction: row wrap;
