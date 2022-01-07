@@ -56,13 +56,6 @@ a:hover {
   justify-content: space-between;
   padding: 0.9% 0 3% 2.7%;
 }
-.nav,
-.logoSVG,
-.time {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 nav > ul > li > a {
   color: #222;
   text-decoration: none;
@@ -72,24 +65,22 @@ nav > ul > li > a {
 }
 nav > ul > li {
   display: inline-block;
-  margin: 0 0% 5% 0;
+  padding-top: 2vh;
   margin-right: 13px;
   font-family: serif;
-  padding-left: 0;
 }
-.logoSVG {
-  padding: 0% 0 1% 0;
-  margin-right: 25%;
-  align-items: left;
-  display: inline-block;
+.header-container > img {
+  width: 250px;
+  background-color: #28a0d5;
 }
 .time {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   margin: 1% 5% 0% 0%;
   width: 10px;
 }
-
+/* general section styling */
 section {
   padding: 6vh 3vw 2vh 2.5vw;
 }
@@ -107,15 +98,12 @@ h1 {
 }
 section ul {
   display: block;
-  width: 150px;
-  text-align: right;
   background-color: #28a0d5;
 }
 section ul li {
   display: block;
   font-size: 14.4px;
   text-decoration: none;
-  line-height: 20px;
 }
 section ul li a {
   text-decoration: none;
@@ -127,43 +115,14 @@ section > div {
   align-items: center;
   justify-content: space-between;
 }
-.section1 h1,
-.section1 div {
-  display: block;
-  width: 50%;
-}
-.section1 {
-  display: flex;
-  flex-direction: row wrap;
+
+/* first section */
+section > div > article > p {
+  /* display: block; */
   width: 100%;
-}
-.section1 ul {
-  display: block;
-  width: 50%;
-}
-.section1 article {
-  display: block;
-  width: 50%;
   font-size: 46px;
   padding-left: 3vw;
   background-color: #28a0d5;
-}
-
-section .section1-container {
-  display: flex;
-  flex-direction: row wrap;
-  width: 100%;
-}
-.section1-txt {
-  width: 100%;
-  padding: 0 30px 0 30px;
-  font-weight: 100;
-  text-align: left;
-}
-.section1-txt p {
-  font-size: 53px;
-  color: #222;
-  line-height: 1.1;
 }
 
 .section2-box {
@@ -200,7 +159,7 @@ footer div {
   align-items: center;
 }
 footer div p {
-  font-size: 24px;
+  font-size: 40px;
 }
 footer div p a {
   text-decoration: none;
@@ -208,14 +167,14 @@ footer div p a {
 }
 
 /* slider styling */
-.slider {
+/* .slider {
   width: 780px;
   height: 530px;
   background-color: yellow;
   margin-top: 0px;
   overflow: hidden;
-}
-.image-container {
+} */
+/* .image-container {
   width: 3900px;
   height: 530px;
   background-color: #28a0d5;
@@ -225,14 +184,14 @@ footer div p a {
   -moz-transition: left 2s;
   -o-transition: left 2s;
   transition: left 2s;
-}
-.slide {
+} */
+/* .slide {
   float: right;
   margin: 0px;
   padding: 0px;
   position: relative;
-}
-#slide-1:target ~ .image-container {
+} */
+/* #slide-1:target ~ .image-container {
   left: 0px;
 }
 #slide-2:target ~ .image-container {
@@ -261,9 +220,9 @@ footer div p a {
   width: 15px;
   border-radius: 50px;
   background-color: grey;
-}
+} */
 /* CSS resposive slides */
-#slider {
+/* #slider {
   overflow: hidden;
   width: 4680px;
   height: 530px;
@@ -307,7 +266,7 @@ footer div p a {
   100% {
     left: -3120px;
   }
-}
+} */
 
 /* work page layout */
 .work-container {
