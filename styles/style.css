@@ -94,16 +94,15 @@ h1 {
   font-weight: lighter;
   font-size: 85px;
   color: #222;
-  background-color: aquamarine;
 }
 section ul {
   display: block;
-  background-color: #28a0d5;
 }
 section ul li {
   display: block;
   font-size: 14.4px;
   text-decoration: none;
+  text-align: end;
 }
 section ul li a {
   text-decoration: none;
@@ -117,12 +116,15 @@ section > div {
 }
 
 /* first section */
+section > div > ul > li {
+  max-width: 794px;
+  max-height: 529px;
+}
 section > div > article > p {
   /* display: block; */
   width: 100%;
   font-size: 46px;
   padding-left: 3vw;
-  background-color: #28a0d5;
 }
 
 .section2-box {
