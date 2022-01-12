@@ -82,17 +82,17 @@ nav > ul > li {
 }
 /* general section styling */
 section {
-  padding: 6vh 3vw 2vh 2.5vw;
+  padding: 8vh 3vw 8vh 3vw;
 }
 
 h1 {
   display: block;
   width: 70%;
   margin: inherit;
-  padding-bottom: 2vh;
+  padding-bottom: 3vh;
   font-family: "RecklessNeue", serif;
   font-weight: lighter;
-  font-size: 85px;
+  font-size: 83px;
   color: #222;
 }
 section ul {
@@ -111,51 +111,45 @@ section ul li a {
 section > div {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: initial;
   justify-content: space-between;
 }
 
 /* first section */
-section > div > ul > li {
+ul > li {
   max-width: 794px;
   max-height: 529px;
 }
 section > div > article > p {
-  /* display: block; */
   width: 100%;
   font-size: 46px;
   padding-left: 3vw;
+  line-height: 1.15;
 }
-
-.section2-box {
-  height: 595px;
-  width: 25%;
-  font-family: "DMSans-Regular";
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+/* secound section */
+section > ul > li {
+  display: inline-block;
 }
-
-.section2-box > picture > img {
-  height: 515px;
-  max-width: 100%;
-  padding-bottom: 1%;
+section > ul > li :nth-child(1),
+section > ul > li :nth-child(2) {
+  padding-right: 4.4vh;
 }
-.section2-box > picture > img:hover {
-  opacity: 70%;
+li figcaption {
+  padding-top: 1vh;
+  text-align: start;
+  font-size: 1.2rem;
+  font-family: "DMSans-Regular", sans-serif;
 }
-.section2-box p {
-  line-height: 1.2;
-  font-size: 13.5px;
-  font-weight: 500;
-}
-.section2-box > div {
+li figcaption p:nth-child(3) {
+  padding-top: 2vh;
   color: #707070;
-  padding-top: 3%;
+  font-size: 14px;
 }
+
+/* footer */
 footer div {
   margin: 10px;
-  padding: 2% 0 2% 0;
+  padding: 6vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
