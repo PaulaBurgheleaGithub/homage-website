@@ -129,10 +129,10 @@ section > div > article > p {
 /* secound section */
 section > ul > li {
   display: inline-block;
+  padding-right: 6.9vh;
 }
-section > ul > li :nth-child(1),
-section > ul > li :nth-child(2) {
-  padding-right: 4.4vh;
+section > ul > li:nth-last-child(1) {
+  padding-right: 0 !important;
 }
 li figcaption {
   padding-top: 1vh;
