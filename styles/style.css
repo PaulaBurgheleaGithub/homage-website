@@ -54,7 +54,7 @@ a:hover {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding: 0.9% 0 3% 2.7%;
+  padding: 2vh 3.9vw;
 }
 nav > ul > li > a {
   color: #222;
@@ -82,7 +82,7 @@ nav > ul > li {
 }
 /* general section styling */
 section {
-  padding: 8vh 3vw 8vh 3vw;
+  padding: 8vh 3.3vw;
 }
 
 h1 {
@@ -129,7 +129,7 @@ section > div > article > p {
 /* secound section */
 section > ul > li {
   display: inline-block;
-  padding-right: 6.9vh;
+  padding-right: 3.2vw;
 }
 section > ul > li:nth-last-child(1) {
   padding-right: 0 !important;
@@ -283,6 +283,5 @@ footer div p a {
   height: 100%;
 }
 .row1 {
-  display: grid;
   background-color: #222;
 }
